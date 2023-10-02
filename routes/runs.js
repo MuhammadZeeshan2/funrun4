@@ -50,7 +50,7 @@ router.get('/:id', async (req, res) => {
       where: { id: requestedId },
       include: User, // This includes the associated Users
     });
-
+    console.log(run);
     if (!run) {
       // Handle the case where the Run with the given ID is not found
       return res.status(404).send('Run not found');
@@ -59,8 +59,10 @@ router.get('/:id', async (req, res) => {
     // Render the detail view of the run along with associated Users data
     res.render('runs/run', {
       title: 'Run Details: ' + run.name,
-      run_details: run,
+      run_details:run,
+      // console.log(run_details)
     });
+
   } catch (error) {
     // Handle any errors that occur during the query or rendering
     console.error(error);

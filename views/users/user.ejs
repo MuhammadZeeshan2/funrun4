@@ -5,10 +5,10 @@
 <p><b>Gender: </b><%= user_details.gender %></p>
 
 <!-- Display associated Runs if available -->
-<% if (user_details.Runs && user_details.Runs.length > 0) { %>
+<% if (user_details.runs && user_details.runs.length > 0) { %>
   <h2>Registered Runs:</h2>
   <ul>
-    <% user_details.Runs.forEach(function(run) { %>
+    <% user_details.runs.forEach(function(run) { %>
       <li>
         <a href="/runs/<%= run.id %>"><%= run.name %></a>
       </li>

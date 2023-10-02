@@ -6,12 +6,12 @@
     <p><b>Date: </b><%= run_details.date %></p>
     <p><b>Location: </b><%= run_details.city %>, <%= run_details.state %></p>
     <p><b>Website: </b><a href='<%= run_details.url %>' target="_blank"><%= run_details.url %></a></p>
-    
+
     <!-- Display associated Users if available -->
-    <% if (run_details.Users && run_details.Users.length > 0) { %>
+    <% if (run_details.users && run_details.users.length > 0) { %>
       <h2>Registered Users:</h2>
       <ul>
-        <% run_details.Users.forEach(function (user) { %>
+        <% run_details.users.forEach(function (user) { %>
           <li>
             <a href="/users/<%= user.id %>"><%= user.first_name %> <%= user.last_name %></a>
           </li>
