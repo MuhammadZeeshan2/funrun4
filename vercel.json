@@ -3,10 +3,16 @@
   "builds": [
     {
       "src": "./app.js",
-      "use": "@vercel/node"
-
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30,
+        "install": {
+          "include": ["sqlite3"]
+        }
+      }
     }
   ],
+  
   "routes": [
     {
       "src": "/(.*)",
