@@ -1,6 +1,7 @@
 require('app-module-path').addPath(__dirname);
-
+require('dotenv').config();
 // Imports
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
