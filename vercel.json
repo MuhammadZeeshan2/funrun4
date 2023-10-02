@@ -13,7 +13,7 @@
     }
   ],
   "frameworks": {
-    "node": "@vercel/node"
+    "node": "@vercel/node",
+    "express": "@vercel/node"
   }
-
 }
