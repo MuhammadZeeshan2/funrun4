@@ -6,3 +6,7 @@ const sequelize = new Sequelize('funruns', '', '', {
 });
 
 module.exports = sequelize;
+
+
+
+
